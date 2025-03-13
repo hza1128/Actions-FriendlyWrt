@@ -161,7 +161,7 @@ jobs:
 
     strategy:
       matrix:
-        VERSION: [24.10]
+        VERSION: ['24.10']
         CPU: [rk3588]
         SET: [docker]
     steps:
