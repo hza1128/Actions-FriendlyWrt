@@ -29,6 +29,6 @@ sed -i 's/CONFIG_LUCI_LANG_zh_Hans=n/CONFIG_LUCI_LANG_zh_Hans=y/' configs/rockch
 sed -i "s/option limit_enable '1'/option limit_enable '0'/" `find friendlywrt/package/ -follow -type f -path '*/nft-qos/files/nft-qos.config'`
 
 ## set ip address
-chmod a+x ../patches_my/ip_addr_r5s.sh
-cp ../patches_my/ip_addr_r5s.sh `find friendlywrt/target/ -follow -type d -path '*rockchip*/root'`
-echo '[ -f /root/ip_addr_r5s.sh ] && /root/ip_addr_r5s.sh' >> `find friendlywrt/target/ -follow -type f -path '*rockchip*/uci-defaults/vendor.defaults'`
+chmod a+x ../patches_my/ip_addr_r6-t6.sh
+cp ../patches_my/ip_addr_r6-t6.sh `find friendlywrt/target/ -follow -type d -path '*rockchip*/root'`
+echo '[ -f /root/ip_addr_r6-t6.sh ] && /root/ip_addr_r5s.sh' >> `find friendlywrt/target/ -follow -type f -path '*rockchip*/uci-defaults/vendor.defaults'`
