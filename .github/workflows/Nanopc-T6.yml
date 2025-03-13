@@ -32,7 +32,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     strategy:
       matrix:
-        VERSION: [23.05]
+        VERSION: [24.10]
         SET: [docker]
 
     steps:
@@ -161,8 +161,8 @@ jobs:
 
     strategy:
       matrix:
-        VERSION: [23.05]
-        CPU: [rk3568]
+        VERSION: [24.10]
+        CPU: [rk3588]
         SET: [docker]
     steps:
     - name: Checkout
@@ -231,15 +231,6 @@ jobs:
       run: |
         cd project
         case ${{ matrix.CPU }} in
-        rk3328)
-          MODEL=R2S-R2C-Series
-          ;;
-        rk3399)
-          MODEL=R4S-Series
-          ;;
-        rk3568)
-          MODEL=R5S-R5C-Series
-          ;;
         rk3588)
           MODEL=T6-R6S-R6C-Series
           ;;
