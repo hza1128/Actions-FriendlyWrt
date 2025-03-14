@@ -31,4 +31,4 @@ sed -i "s/option limit_enable '1'/option limit_enable '0'/" `find friendlywrt/pa
 ## set ip address
 chmod a+x ../patches_my/ip_addr_r6-t6.sh
 cp ../patches_my/ip_addr_r6-t6.sh `find friendlywrt/target/ -follow -type d -path '*rockchip*/root'`
-echo '[ -f /root/ip_addr_r6-t6.sh ] && /root/ip_addr_r5s.sh' >> `find friendlywrt/target/ -follow -type f -path '*rockchip*/uci-defaults/vendor.defaults'`
+echo '[ -f /root/ip_addr_r6-t6.sh ] && /root/ip_addr_r6-t6.sh' >> `find friendlywrt/target/ -follow -type f -path '*rockchip*/uci-defaults/vendor.defaults'`
