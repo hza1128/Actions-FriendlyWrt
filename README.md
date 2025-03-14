@@ -1,9 +1,9 @@
-# 使用 GitHub Actions 编译 FriendlyWrt
+# 使用 GitHub Actions 编译 FriendlyWrt .删除部分不常用的插件，增加科学插件。
 [English](README_en.md)
 ### 基本信息 
 - 用户名：root
 - 密码：password
-- 后台IP：192.168.2.1
+- 后台IP：192.168.10.11
 - 固件下载地址： https://github.com/friendlyarm/Actions-FriendlyWrt/releases
 - 更多使用说明: https://wiki.friendlyelec.com/wiki/index.php/Template:FriendlyWrt21/zh
 ### 固件说明
