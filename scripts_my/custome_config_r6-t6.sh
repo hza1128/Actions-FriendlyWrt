@@ -4,7 +4,6 @@
 sed -i -e '460i\CONFIG_PACKAGE_luci-app-passwall=y' configs/rockchip/01-nanopi
 sed -i -e '460a\CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=n' configs/rockchip/01-nanopi
 sed -i -e '460a\CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=n' configs/rockchip/01-nanopi
-
 sed -i '/CONFIG_PACKAGE_vsftpd=y/d' configs/rockchip/01-nanopi
 sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=.*/CONFIG_TARGET_ROOTFS_PARTSIZE=768/g' configs/rockchip/01-nanopi
 sed -i -e '/CONFIG_MAKE_TOOLCHAIN=y/d' configs/rockchip/01-nanopi
@@ -21,7 +20,6 @@ sed -i -e '/CONFIG_PACKAGE_luci-app-smartdns=y/d' configs/rockchip/01-nanopi
 sed -i -e '/CONFIG_PACKAGE_luci-app-cpufreq=y/d' configs/rockchip/01-nanopi
 sed -i -e 's/CONFIG_IB=y/# CONFIG_IB is not set/g' configs/rockchip/01-nanopi
 sed -i -e 's/CONFIG_SDK=y/# CONFIG_SDK is not set/g' configs/rockchip/01-nanopi
-
 sed -i 's/=y/=n/g' configs/rockchip/02-luci_lang
 sed -i 's/CONFIG_LUCI_LANG_en=n/CONFIG_LUCI_LANG_en=y/' configs/rockchip/02-luci_lang
 sed -i 's/CONFIG_LUCI_LANG_zh_Hans=n/CONFIG_LUCI_LANG_zh_Hans=y/' configs/rockchip/02-luci_lang
