@@ -24,6 +24,13 @@ sed -i 's/=y/=n/g' configs/rockchip/02-luci_lang
 sed -i 's/CONFIG_LUCI_LANG_en=n/CONFIG_LUCI_LANG_en=y/' configs/rockchip/02-luci_lang
 sed -i 's/CONFIG_LUCI_LANG_zh_Hans=n/CONFIG_LUCI_LANG_zh_Hans=y/' configs/rockchip/02-luci_lang
 
+use luci-app-cpufreq in friendlywrt
+config_file_cpufreq=`find friendlywrt/package/ -follow -type f -path '*/luci-app-cpufreq/root/etc/config/cpufreq'`
+truncate -s-1 $config_file_cpufreq
+echo -e "\toption governor0 'schedutil'" >> $config_file_cpufreq
+echo -e "\toption minfreq0 '816000'" >> $config_file_cpufreq
+echo -e "\toption maxfreq0 '1512000'\n" >> $config_file_cpufreq
+
 sed -i "s/option limit_enable '1'/option limit_enable '0'/" `find friendlywrt/package/ -follow -type f -path '*/nft-qos/files/nft-qos.config'`
 
 ## set ip address
